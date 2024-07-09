@@ -22,3 +22,7 @@ void Player::set_led_value(uint8_t value){
 const char* Player::get_name() {
     return color_name.c_str();
 }
+
+uint16_t Player::get_frequency() {
+    return frequency;
+}

@@ -4,6 +4,7 @@
 
 void setup() {
   Serial.begin(9600);
+  noTone(BUZZER_PIN);
 }
 
 void loop() {
@@ -14,10 +15,12 @@ void loop() {
       Serial.write("\r\n");
 
       players[i]->set_led_value(1);
+      tone(BUZZER_PIN, players[i]->get_frequency(), 1000);
       delay(5000);
 
       players[i]->set_led_value(0);
     }
   }
+
 }
 

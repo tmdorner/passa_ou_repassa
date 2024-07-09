@@ -7,6 +7,7 @@ class Player {
     private:
         uint8_t btn_gpio;
         uint8_t led_gpio;
+        uint16_t frequency;
         String color_name;
 
     public:
@@ -14,6 +15,7 @@ class Player {
         bool get_btn_value();
         void set_led_value(uint8_t value);
         const char* get_name();
+        uint16_t get_frequency();
 
 };
 

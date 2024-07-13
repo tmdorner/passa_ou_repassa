@@ -11,7 +11,7 @@ class Player {
         String color_name;
 
     public:
-        Player(uint8_t btn, uint8_t led, String name);
+        Player(uint8_t btn, uint8_t led, String name, uint16_t freq);
         bool get_btn_value();
         void set_led_value(uint8_t value);
         const char* get_name();

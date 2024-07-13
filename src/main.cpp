@@ -15,7 +15,9 @@ void loop() {
       Serial.write("\r\n");
 
       players[i]->set_led_value(1);
-      tone(BUZZER_PIN, players[i]->get_frequency(), 1000);
+      tone(BUZZER_PIN, players[i]->get_frequency());
+      delay(1000);
+      noTone(BUZZER_PIN);
       delay(5000);
 
       players[i]->set_led_value(0);

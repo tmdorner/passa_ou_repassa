@@ -1,9 +1,10 @@
 #include "player.hpp"
 
-Player::Player(uint8_t btn, uint8_t led, String name) {
+Player::Player(uint8_t btn, uint8_t led, String name, uint16_t freq) {
     btn_gpio = btn;
     led_gpio = led;
     color_name = name;
+    frequency = freq;
 
     pinMode(btn_gpio, INPUT);
     pinMode(led_gpio, OUTPUT);
